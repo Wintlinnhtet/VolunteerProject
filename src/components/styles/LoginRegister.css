@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@layer base{
+    :root {
+        --button-bg: #5A189A;
+        --button-text: #FFFFFF;
+        --hover-bg: #7B2CBF;
+        --border-color-dark: #240046;
+        --border-color-light: #E0AAFF;
+        --text-color-light: #FFFFFF;
+        --text-color-dark: #3C096C;
+        --hover-text:#E0AAFF;
+        --card-bg-dark: #3C096C;
+        --font-family: 'sora', sans-serif;
+        --rounded-circle-bg: #9D4EDD;
+    }
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-family);
+        }
+        
+}
+@layer components {
+    .card{
+        @apply flex w-fit h-fit mx-auto my-32 rounded-lg overflow-hidden shadow-lg ;
+    }
+   
+    .card-body {
+        @apply w-1/2 p-12 flex flex-col justify-center relative rounded-r-lg  text-[--text-color-dark];
+    }
+     .card-header{
+        @apply text-[--text-colour-light] font-semibold text-lg mb-3 text-center;
+    }
+    .input-field{
+        @apply border-b-[2px] border-[--border-color-light] py-2 mb-6 w-full text-sm placeholder-gray-400 focus:outline-none focus:border-[--border-color-dark] transition-colors duration-300;
+    }
+    .button{
+        @apply bg-[--button-bg] text-sm text-center text-white rounded-full ml-2 px-16 py-2 w-fit shadow-md hover:bg-[--hover-bg] hover:text-[--hover-text] transition;
+    }
+    .rounded-circle {
+        @apply rounded-full bg-[--rounded-circle-bg] text-white border-[--rounded-circle-bg] border-2 flex items-center justify-center;
+    }
+   
+}
+    
