@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Components/styles/LoginRegister.css'
+import '../components/styles/LoginRegister.css'
 import { Link } from "react-router-dom";
 
 
@@ -8,7 +8,7 @@ const Login = () => {
     <div>
       <div className="card">
         <div className='bg-[--card-bg-dark]'>
-          <p className='text-center mx-10 my-32'>Hello Welcome to our organiztion</p>
+          <p className='text-center text-[var(--card-bg-light)] mx-10 my-32'>Hello Welcome to our organiztion</p>
         </div>
         <div className="card-body">
            <div className="card-header">Login</div>

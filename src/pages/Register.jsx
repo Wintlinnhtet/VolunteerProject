@@ -95,7 +95,7 @@ const Register = () => {
       case 2:
         return (
           <div className="w-fit">
-              <h3 className="text-sm font-semibold text-gray-600 uppercase">
+              <h3 className="text-sm font-semibold text-[var(--card-bg-dark)] uppercase">
                 Account Details
               </h3>
               <div className="mt-2 ">
