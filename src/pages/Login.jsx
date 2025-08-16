@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../components/styles/LoginRegister.css'
 import { Link } from "react-router-dom";
 

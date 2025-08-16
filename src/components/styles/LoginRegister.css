@@ -14,7 +14,8 @@
         --text-color-dark: #3C096C;
         --hover-text:#E0AAFF;
         --card-bg-dark: #3C096C;
-        --font-family: 'sora', sans-serif;
+        --font-family: 'roboto', sans-serif;
+        color: white;
         --rounded-circle-bg: #9D4EDD;
     }
     *{
@@ -22,6 +23,7 @@
         margin: 0;
         padding: 0;
         font-family: var(--font-family);
+       
         }
         
 }

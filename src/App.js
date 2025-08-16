@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import './App.css';
-import Login from './Pages/Login.jsx';
-import Register from './Pages/Register.jsx';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-function App() {
-  return (
-   <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-=======
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -25,7 +11,6 @@ import Organizations from "./pages/Organization";
 import OrganizationDetail from "./pages/OrganizationDetail";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-
 
 function App() {
   return (
@@ -43,7 +28,6 @@ function App() {
         <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
->>>>>>> fa432265e0e89cfec79540c973d05f743809b6de
     </Router>
   );
 }

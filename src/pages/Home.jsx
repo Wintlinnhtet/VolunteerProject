@@ -78,7 +78,7 @@ export default function Home() {
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Call For Donations</h3>
           <p className="text-gray-600 mb-3 px-4">
             Lives are being changed every day — and you can be part of that change. Step up and support a cause that matters.
-          </  p>
+          </p>
           <p className="text-[#F180FE] leading-snug text-sm font-medium underline cursor-pointer">Read more</p>
         </div>
 
