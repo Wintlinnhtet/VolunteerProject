@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
 import '../components/styles/LoginRegister.css'
 import { Link } from "react-router-dom";
+
 
 // testing git push
 const Login = () => {
@@ -9,7 +10,7 @@ const Login = () => {
     <div>
       <div className="card">
         <div className='bg-[--card-bg-dark]'>
-          <p className='text-center mx-10 my-32'>Hello Welcome to our organiztion</p>
+          <p className='text-center text-[var(--text-color-light)] mx-10 my-32'>Hello Welcome to our organiztion</p>
         </div>
         <div className="card-body">
            <div className="card-header">Login</div>
