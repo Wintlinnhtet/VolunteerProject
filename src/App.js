@@ -13,7 +13,6 @@ import OrganizationDetail from "./pages/OrganizationDetail";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 
-
 function App() {
   return (
     <Router>
