@@ -187,7 +187,7 @@ export default function Donate() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {donations.map((donation) => (
           <Link
-            to={`/donate/${donation.id}`}
+            to={`/donation/${donation.id}`}
             key={donation.id}
             className="block bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition duration-300"
           >
