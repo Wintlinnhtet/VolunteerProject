@@ -50,6 +50,25 @@ export default function Volunteering() {
     );
   });
 
+  const [activities, setActivities] = useState([])
+
+  const fetchActivities = async () => {
+    try {
+      const response = await fetch("http://localhost:9000/api/activities");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      setActivities(data);
+    } catch (error) {
+      console.error("Error fetching volunteer activities:", error);
+    }
+  }
+
+  useEffect(()=>{
+    fetchActivities()
+  })
+
   return (
     <div
       className="min-h-screen py-8 bg-cover bg-center"
