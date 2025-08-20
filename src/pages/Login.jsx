@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../components/styles/LoginRegister.css'
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'sonner';
 
-// testing git push
+
 const Login = () => {
   const [test,setTest] = useState();
   const [email, setEmail] = useState("");

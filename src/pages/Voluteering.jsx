@@ -31,6 +31,21 @@ export default function Volunteering() {
   const [sort, setSort] = useState("Recent");
   const [search, setSearch] = useState("");
 
+  const [activities, setActivities] = useState([])
+  const fetchActivities = async() =>{
+    try {
+      // console.log(process.env.BACKEND_URL)
+      const response = await fetch(`http://localhost:9000/api/activities`)
+      const data = await response.json();
+      setActivities(data.data);
+    } catch (error) {
+      console.log("fail to fetch")
+    }
+  }
+  useEffect(()=>{
+    fetchActivities()
+  },[])
+
   // 🔹 Ready for backend API
   useEffect(() => {
     // Uncomment and adjust URL when backend is ready
@@ -50,24 +65,6 @@ export default function Volunteering() {
     );
   });
 
-  const [activities, setActivities] = useState([])
-
-  const fetchActivities = async () => {
-    try {
-      const response = await fetch("http://localhost:9000/api/activities");
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      setActivities(data);
-    } catch (error) {
-      console.error("Error fetching volunteer activities:", error);
-    }
-  }
-
-  useEffect(()=>{
-    fetchActivities()
-  })
 
   return (
     <div
@@ -136,10 +133,10 @@ export default function Volunteering() {
 
       {/* Volunteer Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
-        {filteredVolunteers.map((volunteer) => (
+        {activities.map((volunteer) => (
           <Link
-            to={`/volunteer/${volunteer.id}`}
-            key={volunteer.id}
+            to={`/volunteer/${volunteer._id}`}
+            key={volunteer._id}
             className="block bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition duration-300"
           >
             <img
