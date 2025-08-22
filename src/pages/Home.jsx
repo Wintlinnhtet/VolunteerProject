@@ -1,6 +1,6 @@
 // src/pages/Home.jsx
 import React from "react";
-import bgImage from "../assets/new_home.png"; // replace with your real background
+import bgImage from "../assets/new_home.png";
 import volunteerIcon from "../assets/home_icon_1.png";
 import donationIcon from "../assets/home_icon_2.png";
 import sendIcon from "../assets/home_icon_3.png";
