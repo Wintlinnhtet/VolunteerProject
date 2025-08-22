@@ -12,10 +12,12 @@ import Organizations from "./pages/Organization";
 import OrganizationDetail from "./pages/OrganizationDetail";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import { Toaster } from "sonner";
 
 function App() {
   return (
     <Router>
+      <Toaster position="top-right"/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

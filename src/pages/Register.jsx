@@ -1,13 +1,19 @@
 import React, { useState } from "react";
-import "./Login"
-import { FaFacebook, FaInstagram, FaInstagramSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import "pages/Login";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaTwitterSquare,
+} from "react-icons/fa";
 const Register = () => {
   const [step, setStep] = useState(1);
 
   const steps = [
     { step: 1, label: "Organization Details" },
     { step: 2, label: "Account Details" },
-    { step: 5, label: "Social Accounts" }
+    { step: 5, label: "Social Accounts" },
   ];
 
   const handleNext = () => {
@@ -38,9 +44,11 @@ const Register = () => {
             {/* Organization Name */}
             <div className="mt-2">
               <input
-                type="text" name="orgname"
+                type="text"
+                name="orgname"
                 placeholder="Organization Name"
-                className="input-field w-full"/>
+                className="input-field w-full"
+              />
             </div>
 
             {/* Organization Address */}
@@ -63,12 +71,7 @@ const Register = () => {
                 placeholder="Post Code"
                 className="input-field"
               />
-              <input
-                type="text"
-                placeholder="City"
-                className="input-field"
-              />
-              
+              <input type="text" placeholder="City" className="input-field" />
             </div>
 
             {/* Contact Details */}
@@ -95,49 +98,73 @@ const Register = () => {
       case 2:
         return (
           <div className="w-fit">
-              <h3 className="text-sm font-semibold text-[var(--card-bg-dark)] uppercase">
-                Account Details
-              </h3>
-              <div className="mt-2 ">
-                <input
-                  type="text"
-                  placeholder="Username"
-                  className="input-field "
-                />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="input-field"
-                />
-                <input
-                  type="password"
-                  placeholder="Confirm Password"
-                  className="input-field"
-                />
-              </div>
+            <h3 className="text-sm font-semibold text-[var(--card-bg-dark)] uppercase">
+              Account Details
+            </h3>
+            <div className="mt-2 ">
+              <input
+                type="text"
+                placeholder="Username"
+                className="input-field "
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                className="input-field"
+              />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                className="input-field"
+              />
+            </div>
           </div>
         );
 
       case 3:
         return (
-            <form className="">
-              <div className="flex items-center">
-                <FaFacebook className="text-[--card-bg-dark] text-2xl mr-4" />
-                <input type="text" name="" id="" placeholder="Fill your account link" className="input-field " />
-              </div>
-              <div className="flex items-center">
-                <FaLinkedin className="text-[--card-bg-dark] text-2xl mr-4" />
-                <input type="text" name="" id="" placeholder="Fill your account link" className=" input-field "/>
-              </div>
-              <div className="flex items-center">
-                <FaTwitterSquare className="text-[--card-bg-dark] text-2xl mr-4" />
-                <input type="text" name="" id="" placeholder= "Fill your account link" className=" input-field " />
-             </div>
-               <div className="flex items-center">
-                <FaInstagramSquare className="text-[--card-bg-dark] text-2xl mr-4" />
-                <input type="text" name="" id="" placeholder="Fill your account link" className=" input-field "/>
-              </div>
-            </form>
+          <form className="">
+            <div className="flex items-center">
+              <FaFacebook className="text-[--card-bg-dark] text-2xl mr-4" />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Fill your account link"
+                className="input-field "
+              />
+            </div>
+            <div className="flex items-center">
+              <FaLinkedin className="text-[--card-bg-dark] text-2xl mr-4" />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Fill your account link"
+                className=" input-field "
+              />
+            </div>
+            <div className="flex items-center">
+              <FaTwitterSquare className="text-[--card-bg-dark] text-2xl mr-4" />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Fill your account link"
+                className=" input-field "
+              />
+            </div>
+            <div className="flex items-center">
+              <FaInstagramSquare className="text-[--card-bg-dark] text-2xl mr-4" />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Fill your account link"
+                className=" input-field "
+              />
+            </div>
+          </form>
         );
       default:
         return null;
@@ -147,10 +174,11 @@ const Register = () => {
   return (
     <div className="h-fit w-fit flex items-center justify-center p-4 mx-auto mt-8">
       <div className=" w-full rounded-2xl shadow-lg flex overflow-hidden">
-        
         {/* Left Sidebar */}
         <div className="bg-[--card-bg-dark] w-[20rem] p-10 ">
-          <h2 className="text-[var(--text-color-light)] text-xl font-semibold mb-8">Create account</h2>
+          <h2 className="text-[var(--text-color-light)] text-xl font-semibold mb-8">
+            Create account
+          </h2>
           <div className="space-y-6">
             {steps.map((item) => (
               <div key={item.step} className="flex items-center gap-4">
@@ -159,8 +187,8 @@ const Register = () => {
                     step === item.step
                       ? "rounded-circle"
                       : step > item.step
-                      ? "rounded-circle"
-                      : "border-white text-white"
+                        ? "rounded-circle"
+                        : "border-white text-white"
                   }`}
                 >
                   {item.step}
@@ -170,8 +198,8 @@ const Register = () => {
                     step === item.step
                       ? "text-[--text-color-light] font-medium"
                       : step > item.step
-                      ? "text-[--text-color-light]"
-                      : "text-white"
+                        ? "text-[--text-color-light]"
+                        : "text-white"
                   }`}
                 >
                   {item.label}
@@ -198,10 +226,7 @@ const Register = () => {
             >
               Back
             </button>
-            <button
-              onClick={handleNext}
-              className="button"
-            >
+            <button onClick={handleNext} className="button">
               {step === steps.length ? "Finish" : "Next"}
             </button>
           </div>
