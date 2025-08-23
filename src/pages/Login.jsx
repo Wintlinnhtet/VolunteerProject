@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../components/styles/LoginRegister.css'
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'sonner';
 
 
 const Login = () => {
-  const [test,setTest] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
